@@ -7,8 +7,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index"
+    
   },
   "dependencies": {
     "body-parser": "^1.19.0",
