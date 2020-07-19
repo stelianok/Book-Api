@@ -10,9 +10,12 @@ const connectionString =
     const pool = new Pool({
 
         connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
-        ssl: isProduction,
-        idleTimeoutMillis: 30000,
-        connectionTimeoutMillis: 2000,
+        ssl: {
+            isProduction,
+            rejectUnauthorized: false 
+        },
+        idleTimeoutMillis: 900000,
+        connectionTimeoutMillis: 900000,
     })
 
 module.exports = {pool}
