@@ -11,8 +11,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
-const getBooks = (req,res) => {
-    pool.query('SELECT * FROM books', (error,results) => {
+const getBooks = async (req,res) => {
+    await pool.query('SELECT * FROM books', (error,results) => {
         if(error){
             throw error
         }
@@ -21,10 +21,10 @@ const getBooks = (req,res) => {
         
     })
 }
-const addBook = (req,res) => {
+const addBook = async (req,res) => {
     const {author, title} = req.body;
 
-    pool.query('INSERT INTO books(author,title) VALUES ($1, $2)',
+    await pool.query('INSERT INTO books(author,title) VALUES ($1, $2)',
     [author, title],
     (error) => {
         if(error){
