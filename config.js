@@ -14,8 +14,6 @@ const connectionString =
             isProduction,
             rejectUnauthorized: false 
         },
-        idleTimeoutMillis: 900000,
-        connectionTimeoutMillis: 900000,
     })
 
 module.exports = {pool}
