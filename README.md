@@ -58,8 +58,9 @@ DB_DATABASE=books_api
 ## Features 🛠✨
 
 - User can see all books in the route /books with   the GET  HTTP method
-- User can add a new book.
+- User can add a new book in the route /books with the POST method.
 
+Route example ` https://example-node-api17.herokuapp.com/books `
 ---
 
 ## Contributing 🤗
