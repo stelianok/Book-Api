@@ -5,7 +5,6 @@
 ### This project was developed with the following technologies
 
 - Nodejs
-- React Native
 - Express
 - PostgreSQL relational database
 
